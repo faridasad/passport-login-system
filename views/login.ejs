@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WAKE UP IT'S 2022</title>
+
+    <style>
+      body {
+        height: 100vh;
+        background-color: #222;
+        color: #fff;
+        font-family: "VT323", monospace;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+      form {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        max-width: 800px;
+        width: 90%;
+      }
+      label {
+        width: 100%;
+        font-size: 1.5em;
+        max-width: 400px;
+      }
+      input {
+        max-width: 400px;
+        width: 90%;
+        padding: 0.5em 1.5em;
+        outline: 0;
+      }
+      h1 {
+        font-size: 4em;
+        letter-spacing: 15px;
+        margin-top: 2em;
+      }
+      button {
+        padding: 1em 3em;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: 300ms all ease-out;
+      }
+      button:hover {
+        color: #fff;
+        background-color: blueviolet;
+      }
+
+      a {
+        font-size: 2em;
+        letter-spacing: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LOG IN</h1>
+    <form action="/login" method="post">
+      <label for="name">Name: </label
+      ><input type="text" id="name" name="name" />
+      <label for="password">Password: </label
+      ><input type="password" id="password" name="password" />
+      <button type="submit">LOGIN</button>
+      <i><a href="/register">wake up</a></i>
+    </form>
+  </body>
+</html>
