@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
     <title>HOMEDU AQ</title>
 
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .main{
-            width: 100vw;
-            height: 100vh;
-            background-color: #222;
-            color: #fff;
-            font-family: 'VT323', monospace;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            flex-direction: column;
-            gap: 2em;
-        }
-        h1{
-            font-size: 4em;
-            letter-spacing: 5px;
-            margin-top: 3em;
-        }
-        button{
-            padding: 1em 3em;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            transition: 300ms all ease-out;
-        }
-        button:hover{
-            color:#fff;
-            background-color: blueviolet;
-        }
-        a{
-            text-decoration: none;
-        }
-
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        background-color: #222;
+        color: #fff;
+        font-family: "VT323", monospace;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 2em;
+      }
+      h1 {
+        font-size: 4em;
+        letter-spacing: 5px;
+        margin-top: 3em;
+      }
+      button {
+        padding: 1em 3em;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: 300ms all ease-out;
+      }
+      button:hover {
+        color: #fff;
+        background-color: blueviolet;
+      }
+      a {
+        text-decoration: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        <h1> Welcome, <%=name %> </h1>
-        <div>
-            <a href="/logout"><button>Log out</button></a>
-        </div>
+      <h1>Welcome, <%=username %></h1>
+      <div>
+        <a href="/logout"><button>Log out</button></a>
+      </div>
     </div>
-</body>
+  </body>
 </html>
