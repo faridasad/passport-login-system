@@ -1,32 +1,31 @@
 import express from "express";
 import mongoose from "mongoose";
-import dotenv from 'dotenv'
-import authRoutes from './routes/authRoutes.js'
-import cookieParser from "cookie-parser"
-import requireAuth from "./middlewares/authMiddleware.js"
-dotenv.config()
+import dotenv from "dotenv";
+import authRoutes from "./routes/authRoutes.js";
+import cookieParser from "cookie-parser";
+dotenv.config();
 
-const app = express()
+const app = express();
 
 const connect = () => {
-    mongoose.connect(process.env.MONGO_URI).then(() => {
-        console.log("Connected to DB");
+  mongoose
+    .connect(process.env.MONGO_URI)
+    .then(() => {
+      console.log("Connected to DB");
     })
-    .catch(err => {
-        throw err;
-    })
-}
+    .catch((err) => {
+      throw err;
+    });
+};
 
-app.use(cookieParser())
-app.use(express.json())
-app.use("/", authRoutes)
+app.use(cookieParser());
+app.use(express.json());
+app.use("/", authRoutes);
 
-
-app.set('view engine', "ejs")
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    res.render("index")
-})
+  res.render("index");
+});
 
-
-app.listen(5000, connect())
+app.listen(5000, connect());
